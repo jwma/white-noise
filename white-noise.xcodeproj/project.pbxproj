@@ -323,6 +323,7 @@
 				FB882E461EC345A100AAB65A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -31,8 +31,9 @@ class ViewController: UIViewController {
     /// 创建不同类型的音频播放器
     func readyPlayer() {
         
-        createPlayerByType(type: "thunder")
-        createPlayerByType(type: "raining")
+        for (_, value) in mapping {
+            createPlayerByType(type: value)
+        }
         
         /// 实现后台播放
         let audioSession = AVAudioSession.sharedInstance()
