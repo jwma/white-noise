@@ -12,7 +12,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     /// 记录不同类型音频跟起对应的播放器
-    var sounds: [String: NSObject] = [String: NSObject]()
+    var sounds: [String: AVAudioPlayer] = [String: AVAudioPlayer]()
     /// 记录不同类型音频跟起对应 UI 控件的 Tag 值
     let mapping: [String: String] = ["100": "thunder", "200": "raining"]
     
@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         let tag = "\(tag)"
         let type = mapping[tag]
         
-        return sounds[type!] as! AVAudioPlayer
+        return sounds[type!]!
     }
     
     @IBAction func play(_ sender: UIButton) {
